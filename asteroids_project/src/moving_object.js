@@ -16,25 +16,25 @@ MovingObject.prototype.draw = function(ctx) {
 }
 
 MovingObject.prototype.move = function(ctx) {
-    // targetX = this.pos[0] + this.vel[0];
-    // targetY = this.pos[1] + this.vel[1];
+    this.pos[0] += this.vel[0];
+    this.pos[1] += this.vel[1];
     
-    targetX = this.pos[0]+this.vel[0];
-    targetY = this.pos[1]+this.vel[1];
+    // targetX = this.pos[0]+this.vel[0];
+    // targetY = this.pos[1]+this.vel[1];
     
     
-    while(this.pos !== [targetX,targetY]){
-    // ctx.clearRect(this.pos[0],this.pos[1],this.radius*500,this.radius*500);
-    this.draw(ctx);
+    // while(this.pos !== [targetX,targetY]){
+    // // ctx.clearRect(this.pos[0],this.pos[1],this.radius*500,this.radius*500);
+    // this.draw(ctx);
   
-    if (this.pos[0] !== targetX) {
-        this.pos[0] += 1;
-    }
-    if (this.pos[1] !== targetY) {
-        this.pos[1] += 1;
-    }
+    // if (this.pos[0] !== targetX) {
+    //     this.pos[0] += 1;
+    // }
+    // if (this.pos[1] !== targetY) {
+    //     this.pos[1] += 1;
+    // }
 
-}
+
 }
 
 

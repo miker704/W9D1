@@ -1,6 +1,8 @@
 const MovingObject = require("./moving_object.js");
+const Asteroid = require("./asteroid.js");
 
 window.MovingObject = MovingObject;
+window.Asteroid= Asteroid;
 
 document.addEventListener("DOMContentLoaded", () => {
    const canvasEl = document.getElementById("game-canvas"); 
@@ -31,5 +33,8 @@ const example2 = new MovingObject({
     color: "#00FF00"
 })
 
+
+const rock = new Asteroid([30, 30])
+window.rock=rock;
 window.example = example;
 window.example2 = example2;
