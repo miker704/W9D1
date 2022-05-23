@@ -5,10 +5,16 @@ window.MovingObject = MovingObject;
 document.addEventListener("DOMContentLoaded", () => {
    const canvasEl = document.getElementById("game-canvas"); 
    canvasEl.height = 400;
+   canvasEl.width = 400;
+
    const ctx = canvasEl.getContext('2d'); 
+   var raf;
    example.draw(ctx);
    example2.draw(ctx);
    example.move(ctx);
+   example2.move(ctx);
+//    example2.draw(ctx);
+//    example.draw(ctx);
 })
 
 const example = new MovingObject({ 
