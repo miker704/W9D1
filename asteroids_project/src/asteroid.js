@@ -2,20 +2,18 @@ const MovingObject = require("./moving_object.js");
 const Util = require("./utils");
 
 const DEFAULT_ASTEROID ={
-    COLOR :'gray',
-    RADIUS : 5,
+    COLOR :'#C0C0C0',
+    RADIUS : 20,
     SPEED : 10
 
 }
 
-function Asteroid (options) {
-    
-    options.color=DEFAULT_ASTEROID.COLOR;
-    options.radius=DEFAULT_ASTEROID.RADIUS;
-    options.vel = Util.randomVec(DEFAULT_ASTEROID.SPEED);
-    options.pos = options.pos;
+function Asteroid (pos) {
+    this.color=DEFAULT_ASTEROID.COLOR;
+    this.radius=DEFAULT_ASTEROID.RADIUS;
+    this.vel = Util.randomVec(DEFAULT_ASTEROID.SPEED);
+    this.pos = pos
 
-    // MovingObject.call(this,options);
     
 }
 Util.inherits(Asteroid,MovingObject);

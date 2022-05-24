@@ -15,35 +15,22 @@ MovingObject.prototype.draw = function(ctx) {
     ctx.stroke();
 }
 
-MovingObject.prototype.move = function(ctx) {
+const FRAME_TIMER_DELTA  = 1000/60;
+
+// MovingObject.prototype.move = function move(timeDelta) {
+MovingObject.prototype.move = function move() {
+
     this.pos[0] += this.vel[0];
     this.pos[1] += this.vel[1];
     
-    // targetX = this.pos[0]+this.vel[0];
-    // targetY = this.pos[1]+this.vel[1];
-    
-    
-    // while(this.pos !== [targetX,targetY]){
-    // // ctx.clearRect(this.pos[0],this.pos[1],this.radius*500,this.radius*500);
-    // this.draw(ctx);
-  
-    // if (this.pos[0] !== targetX) {
-    //     this.pos[0] += 1;
-    // }
-    // if (this.pos[1] !== targetY) {
-    //     this.pos[1] += 1;
-    // }
+    // const velocityScale = timeDelta / FRAME_TIMER_DELTA,
+    // offsetX = this.vel[0] * velocityScale,
+    // offsetY = this.vel[1] * velocityScale;
 
+    // this.pos = [this.pos[0] + offsetX, this.pos[1] + offsetY];   
+    
 
 }
 
-
-
-/*
-scientific calc to move the ball
-
-
-
-*/ 
 
 module.exports = MovingObject;
